@@ -18,13 +18,19 @@ get '/heroes/new' do # show form for new heroes (new)
 end
 
 post '/heroes' do # create a hero (create)
-  Pry.start(binding)
+  hero = Hero.create( params[:hero] )
+
+  redirect to("heroes/#{hero.name}")
 end
 
 get '/heroes/:name' do # show me a hero (show)
   @hero = Hero.find_by_name( params[:name] )
 
-  erb :"heroes/show"
+  if @hero
+    erb :"heroes/show"
+  else
+    "No hero by that name exists!"
+  end
 end
 
 get '/weapons' do # list all weapons (index)

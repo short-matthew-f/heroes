@@ -51,6 +51,8 @@ class Hero
              header_converters: :symbol) do |csv|
         csv << [hero.name, hero.profession, hero.health]
     end
+
+    hero
   end
 
   def find_my_weapon

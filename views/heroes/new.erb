@@ -1,14 +1,18 @@
 <h1>Enroll a Hero</h1>
 
 <form action="/heroes" method="post">
-  <label for="hero_name">Name</label>
-  <input id="hero_name" type="text" name="hero[name]">
+  <fieldset>
+    <legend>Hero Stuff</legend>
+    
+    <label for="hero_name">Name</label>
+    <input id="hero_name" type="text" name="hero[name]">
 
-  <label for="hero_profession">Profession</label>
-  <input id="hero_profession" type="text" name="hero[profession]">
+    <label for="hero_profession">Profession</label>
+    <input id="hero_profession" type="text" name="hero[profession]">
 
-  <label for="hero_health">Health</label>
-  <input id="hero_health" type="text" name="hero[health]">
+    <label for="hero_health">Health</label>
+    <input id="hero_health" type="text" name="hero[health]">
+  </fieldset>
 
   <input type="submit" value="Enroll!">
 </form>
